@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+      
+      <section class="row">
+        <div class="col-lg-1 box">
+          <div class="time-block" id="9am" data-hour="9">9am</div>
+        </div>
+      
+
+    
+        <div class="col-lg-10">
+          <textarea></textarea>
+        </div>
+    
+
+      
+        <div class="col-lg-1">
+          <button class="saveBtn"><i>Save</i></button>
+        </div>
+      </section>
+
+      
+
+      <section class="row">
+        <div class="col-lg-1 box">
+          <div class="time-block" id="10am" data-hour="10">10am</div>
+        </div>
+      
+
+    
+        <div class="col-lg-10">
+          <textarea></textarea>
+        </div>
+    
+
+      
+        <div class="col-lg-1">
+          <button class="saveBtn"><i>Save</i></button>
+        </div>
+      </section>
+        
+
+        <section class="row">
+          <div class="col-lg-1 box">
+            <div class="time-block" id="11am" data-hour="11">11am</div>
+          </div>
+        
+  
+      
+          <div class="col-lg-10">
+            <textarea></textarea>
+          </div>
+      
+  
+        
+          <div class="col-lg-1">
+            <button class="saveBtn"><i>Save</i></button>
+          </div>
+        </section>
+
+        
+        
+        <section class="row">
+          <div class="col-lg-1 box">
+            <div class="time-block" id="12pm" data-hour="12">12pm</div>
+          </div>
+        
+  
+      
+          <div class="col-lg-10">
+            <textarea></textarea>
+          </div>
+      
+  
+        
+          <div class="col-lg-1">
+            <button class="saveBtn"><i>Save</i></button>
+          </div>
+        </section>
+
+       
+
+        <section class="row">
+          <div class="col-lg-1 box">
+            <div class="time-block" id="13pm" data-hour="13">1pm</div>
+          </div>
+        
+  
+      
+          <div class="col-lg-10">
+            <textarea></textarea>
+          </div>
+      
+  
+        
+          <div class="col-lg-1">
+            <button class="saveBtn"><i>Save</i></button>
+          </div>
+        </section>
+
+        
+
+        <section class="row">
+          <div class="col-lg-1 box">
+            <div class="time-block" id="14pm" data-hour="14">2pm</div>
+          </div>
+        
+  
+      
+          <div class="col-lg-10">
+            <textarea></textarea>
+          </div>
+      
+  
+        
+          <div class="col-lg-1">
+            <button class="saveBtn"><i>Save</i></button>
+          </div>
+        </section>
+
+        
+        
+        <section class="row">
+          <div class="col-lg-1 box">
+            <div class="time-block" id="15pm" data-hour="15">3pm</div>
+          </div>
+        
+  
+      
+          <div class="col-lg-10">
+            <textarea></textarea>
+          </div>
+      
+  
+        
+          <div class="col-lg-1">
+            <button class="saveBtn"><i>Save</i></button>
+          </div>
+        </section>
+
+       
+
+        <section class="row">
+          <div class="col-lg-1 box">
+            <div class="time-block" id="16pm" data-hour="16">4pm</div>
+          </div>
+        
+  
+      
+          <div class="col-lg-10">
+            <textarea></textarea>
+          </div>
+      
+  
+        
+          <div class="col-lg-1">
+            <button class="saveBtn"><i>Save</i></button>
+          </div>
+        </section>
+
+        
+
+        <section class="row">
+          <div class="col-lg-1 box">
+            <div class="time-block" id="17pm" data-hour="17">5pm</div>
+          </div>
+        
+  
+      
+          <div class="col-lg-10">
+            <textarea></textarea>
+          </div>
+      
+  
+        
+          <div class="col-lg-1">
+            <button class="saveBtn"><i>Save</i></button>
+          </div>
+        </section>
+
+        
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script>
+
+      $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+
+      var hour = moment().format("H");
+      var CurrentTime = parseInt(hour);
+      console.log("Current time: " + CurrentTime);
+
+      var dataHour = $("#17pm").attr("data-hour");
+      var TableHour = parseInt(dataHour);
+      console.log( "Table hour: " + TableHour);
+
+      // if (TableHour < CurrentTime){
+      //   $("textarea").addClass("past");
+      // }
+
+      if (TableHour === CurrentTime){
+        $("textarea").addClass("present");
+      }
+      
+      console.log(moment().format("H")); //24 hour time
+    </script>
+  </body>
+</html>
