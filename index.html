@@ -33,13 +33,13 @@
       
       <section class="row">
         <div class="col-lg-1 box">
-          <div class="time-block" id="9am" data-hour="9">9am</div>
+          <div class="time-block" id="9am" data-hour= "9">9am</div>
         </div>
       
 
     
         <div class="col-lg-10">
-          <textarea></textarea>
+          <textarea id="color9"></textarea>
         </div>
     
 
@@ -59,7 +59,7 @@
 
     
         <div class="col-lg-10">
-          <textarea></textarea>
+          <textarea id="color10"></textarea>
         </div>
     
 
@@ -78,7 +78,7 @@
   
       
           <div class="col-lg-10">
-            <textarea></textarea>
+            <textarea id="color11"></textarea>
           </div>
       
   
@@ -98,7 +98,7 @@
   
       
           <div class="col-lg-10">
-            <textarea></textarea>
+            <textarea id="color12"></textarea>
           </div>
       
   
@@ -118,7 +118,7 @@
   
       
           <div class="col-lg-10">
-            <textarea></textarea>
+            <textarea id="color1"></textarea>
           </div>
       
   
@@ -138,7 +138,7 @@
   
       
           <div class="col-lg-10">
-            <textarea></textarea>
+            <textarea id="color2"></textarea>
           </div>
       
   
@@ -158,7 +158,7 @@
   
       
           <div class="col-lg-10">
-            <textarea></textarea>
+            <textarea id="color3"></textarea>
           </div>
       
   
@@ -178,7 +178,7 @@
   
       
           <div class="col-lg-10">
-            <textarea></textarea>
+            <textarea id="color4"></textarea>
           </div>
       
   
@@ -198,7 +198,7 @@
   
       
           <div class="col-lg-10">
-            <textarea></textarea>
+            <textarea id="color5"></textarea>
           </div>
       
   
@@ -223,19 +223,104 @@
       var CurrentTime = parseInt(hour);
       console.log("Current time: " + CurrentTime);
 
-      var dataHour = $("#17pm").attr("data-hour");
-      var TableHour = parseInt(dataHour);
-      console.log( "Table hour: " + TableHour);
+      var morning9 = $("#9am").attr("data-hour");
+      var morning10 = $("#10am").attr("data-hour");
+      var morning11 = $("#11am").attr("data-hour");
+      var midDay = $("#12pm").attr("data-hour");
+      var afternoon1 = $("#13pm").attr("data-hour");
+      var afternoon2 = $("#14pm").attr("data-hour");
+      var afternoon3 = $("#15pm").attr("data-hour");
+      var afternoon4 = $("#16pm").attr("data-hour");
+      var afternoon5 = $("#17pm").attr("data-hour");
 
-      // if (TableHour < CurrentTime){
-      //   $("textarea").addClass("past");
-      // }
-
-      if (TableHour === CurrentTime){
-        $("textarea").addClass("present");
-      }
       
-      console.log(moment().format("H")); //24 hour time
+      var morning9parse = parseInt(morning9);
+      var morning10parse = parseInt(morning10);
+      var morning11parse = parseInt(morning11);
+      var midDayparse = parseInt(midDay);
+      var afternoon1parse = parseInt(afternoon1);
+      var afternoon2parse = parseInt(afternoon2);
+      var afternoon3parse = parseInt(afternoon3);
+      var afternoon4parse = parseInt(afternoon4);
+      var afternoon5parse = parseInt(afternoon5);
+      
+      console.log("The hours: ", morning9parse, morning10parse, morning11parse, midDayparse, 
+      afternoon1parse, afternoon2parse, afternoon3parse, afternoon4parse, afternoon5parse);
+
+      console.log("Math: ", CurrentTime + morning10parse);
+
+    if (morning9parse < CurrentTime){
+      $("#color9").addClass("past");
+    } else if (morning9parse === CurrentTime){
+      $("#color9").addClass("present");
+    } else if (morning9parse > CurrentTime){
+      $("#color9").addClass("future");
+    }
+
+    if (morning10parse < CurrentTime){
+      $("#color10").addClass("past");
+    } else if (morning10parse === CurrentTime){
+      $("#color10").addClass("present");
+    } else if (morning10parse > CurrentTime){
+      $("#color10").addClass("future");
+    }
+
+    if (morning11parse < CurrentTime){
+      $("#color11").addClass("past");
+    } else if (morning11parse === CurrentTime){
+      $("#color11").addClass("present");
+    } else if (morning11parse > CurrentTime){
+      $("#color11").addClass("future");
+    }
+
+    if (midDayparse < CurrentTime){
+      $("#color12").addClass("past");
+    } else if (midDayparse === CurrentTime){
+      $("#color12").addClass("present");
+    } else if (midDayparse > CurrentTime){
+      $("#color12").addClass("future");
+    }
+
+    if (afternoon1parse < CurrentTime){
+      $("#color1").addClass("past");
+    } else if (afternoon1parse === CurrentTime){
+      $("#color1").addClass("present");
+    } else if (afternoon1parse > CurrentTime){
+      $("#color1").addClass("future");
+    }
+
+    if (afternoon2parse < CurrentTime){
+      $("#color2").addClass("past");
+    } else if (afternoon2parse === CurrentTime){
+      $("#color2").addClass("present");
+    } else if (afternoon2parse > CurrentTime){
+      $("#color2").addClass("future");
+    }
+
+    if (afternoon3parse < CurrentTime){
+      $("#color3").addClass("past");
+    } else if (afternoon3parse === CurrentTime){
+      $("#color3").addClass("present");
+    } else if (afternoon3parse > CurrentTime){
+      $("#color3").addClass("future");
+    }
+
+    if (afternoon4parse < CurrentTime){
+      $("#color4").addClass("past");
+    } else if (afternoon4parse === CurrentTime){
+      $("#color4").addClass("present");
+    } else if (afternoon4parse > CurrentTime){
+      $("#color4").addClass("future");
+    }
+
+    if (afternoon5parse < CurrentTime){
+      $("#color5").addClass("past");
+    } else if (afternoon5parse === CurrentTime){
+      $("#color5").addClass("present");
+    } else if (afternoon5parse > CurrentTime){
+      $("#color5").addClass("future");
+    }
+    
     </script>
   </body>
 </html>
