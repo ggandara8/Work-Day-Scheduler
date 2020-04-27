@@ -31,293 +31,223 @@
     <div class="container">
       <!-- Timeblocks go here -->
       
-      <section class="row">
-        <div class="col-lg-1 box">
+    <section class="row">
+        <div class="col-lg-1">
           <div class="time-block" id="9am" data-hour= "9">9am</div>
         </div>
-      
-
     
         <div class="col-lg-10">
           <textarea id="color9"></textarea>
         </div>
     
-
-      
         <div class="col-lg-1">
           <button class="saveBtn"><i>Save</i></button>
         </div>
-      </section>
+    </section>
 
-      
-
-      <section class="row">
+    <section class="row">
         <div class="col-lg-1 box">
           <div class="time-block" id="10am" data-hour="10">10am</div>
         </div>
-      
-
     
         <div class="col-lg-10">
           <textarea id="color10"></textarea>
         </div>
     
-
-      
         <div class="col-lg-1">
           <button class="saveBtn"><i>Save</i></button>
         </div>
       </section>
-        
 
-        <section class="row">
+      <section class="row">
           <div class="col-lg-1 box">
             <div class="time-block" id="11am" data-hour="11">11am</div>
           </div>
-        
-  
       
           <div class="col-lg-10">
             <textarea id="color11"></textarea>
           </div>
       
-  
-        
           <div class="col-lg-1">
             <button class="saveBtn"><i>Save</i></button>
           </div>
-        </section>
+      </section>
 
-        
-        
-        <section class="row">
+      <section class="row">
           <div class="col-lg-1 box">
             <div class="time-block" id="12pm" data-hour="12">12pm</div>
           </div>
         
-  
-      
           <div class="col-lg-10">
             <textarea id="color12"></textarea>
           </div>
-      
-  
-        
+    
           <div class="col-lg-1">
             <button class="saveBtn"><i>Save</i></button>
           </div>
-        </section>
+      </section>
 
-       
-
-        <section class="row">
+      <section class="row">
           <div class="col-lg-1 box">
             <div class="time-block" id="13pm" data-hour="13">1pm</div>
           </div>
-        
-  
       
           <div class="col-lg-10">
             <textarea id="color1"></textarea>
           </div>
-      
-  
-        
+
           <div class="col-lg-1">
             <button class="saveBtn"><i>Save</i></button>
           </div>
-        </section>
+      </section>
 
-        
-
-        <section class="row">
+      <section class="row">
           <div class="col-lg-1 box">
             <div class="time-block" id="14pm" data-hour="14">2pm</div>
           </div>
-        
-  
       
           <div class="col-lg-10">
             <textarea id="color2"></textarea>
           </div>
-      
   
-        
           <div class="col-lg-1">
             <button class="saveBtn"><i>Save</i></button>
           </div>
-        </section>
+      </section>
 
-        
-        
-        <section class="row">
+      <section class="row">
           <div class="col-lg-1 box">
             <div class="time-block" id="15pm" data-hour="15">3pm</div>
           </div>
-        
-  
       
           <div class="col-lg-10">
             <textarea id="color3"></textarea>
           </div>
-      
-  
-        
+    
           <div class="col-lg-1">
             <button class="saveBtn"><i>Save</i></button>
           </div>
-        </section>
+      </section>
 
-       
-
-        <section class="row">
+      <section class="row">
           <div class="col-lg-1 box">
             <div class="time-block" id="16pm" data-hour="16">4pm</div>
           </div>
-        
-  
       
           <div class="col-lg-10">
             <textarea id="color4"></textarea>
           </div>
-      
-  
-        
+    
           <div class="col-lg-1">
             <button class="saveBtn"><i>Save</i></button>
           </div>
-        </section>
+      </section>
 
-        
-
-        <section class="row">
+      <section class="row">
           <div class="col-lg-1 box">
             <div class="time-block" id="17pm" data-hour="17">5pm</div>
           </div>
-        
-  
-      
+    
           <div class="col-lg-10">
             <textarea id="color5"></textarea>
           </div>
-      
-  
-        
+    
           <div class="col-lg-1">
             <button class="saveBtn"><i>Save</i></button>
           </div>
-        </section>
-
-        
+      </section>
+  
     </div>
-    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script>
 
-      $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+    $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
-      var hour = moment().format("H");
-      var CurrentTime = parseInt(hour);
-      console.log("Current time: " + CurrentTime);
+    var hour = moment().format("H");
+    var CurrentTime = parseInt(hour);
 
-      var morning9 = $("#9am").attr("data-hour");
-      var morning10 = $("#10am").attr("data-hour");
-      var morning11 = $("#11am").attr("data-hour");
-      var midDay = $("#12pm").attr("data-hour");
-      var afternoon1 = $("#13pm").attr("data-hour");
-      var afternoon2 = $("#14pm").attr("data-hour");
-      var afternoon3 = $("#15pm").attr("data-hour");
-      var afternoon4 = $("#16pm").attr("data-hour");
-      var afternoon5 = $("#17pm").attr("data-hour");
+    var morning9 = parseInt($("#9am").attr("data-hour"));
+    var morning10 = parseInt($("#10am").attr("data-hour"));
+    var morning11 = parseInt($("#11am").attr("data-hour"));
+    var midDay = parseInt($("#12pm").attr("data-hour"));
+    var afternoon1 = parseInt($("#13pm").attr("data-hour"));
+    var afternoon2 = parseInt($("#14pm").attr("data-hour"));
+    var afternoon3 = parseInt($("#15pm").attr("data-hour"));
+    var afternoon4 = parseInt($("#16pm").attr("data-hour"));
+    var afternoon5 = parseInt($("#17pm").attr("data-hour"));
 
-      
-      var morning9parse = parseInt(morning9);
-      var morning10parse = parseInt(morning10);
-      var morning11parse = parseInt(morning11);
-      var midDayparse = parseInt(midDay);
-      var afternoon1parse = parseInt(afternoon1);
-      var afternoon2parse = parseInt(afternoon2);
-      var afternoon3parse = parseInt(afternoon3);
-      var afternoon4parse = parseInt(afternoon4);
-      var afternoon5parse = parseInt(afternoon5);
-      
-      console.log("The hours: ", morning9parse, morning10parse, morning11parse, midDayparse, 
-      afternoon1parse, afternoon2parse, afternoon3parse, afternoon4parse, afternoon5parse);
-
-      console.log("Math: ", CurrentTime + morning10parse);
-
-    if (morning9parse < CurrentTime){
+    if (morning9 < CurrentTime){
       $("#color9").addClass("past");
-    } else if (morning9parse === CurrentTime){
+    } else if (morning9 === CurrentTime){
       $("#color9").addClass("present");
-    } else if (morning9parse > CurrentTime){
+    } else if (morning9 > CurrentTime){
       $("#color9").addClass("future");
     }
 
-    if (morning10parse < CurrentTime){
+    if (morning10 < CurrentTime){
       $("#color10").addClass("past");
-    } else if (morning10parse === CurrentTime){
+    } else if (morning10 === CurrentTime){
       $("#color10").addClass("present");
-    } else if (morning10parse > CurrentTime){
+    } else if (morning10 > CurrentTime){
       $("#color10").addClass("future");
     }
 
-    if (morning11parse < CurrentTime){
+    if (morning11 < CurrentTime){
       $("#color11").addClass("past");
-    } else if (morning11parse === CurrentTime){
+    } else if (morning11 === CurrentTime){
       $("#color11").addClass("present");
-    } else if (morning11parse > CurrentTime){
+    } else if (morning11 > CurrentTime){
       $("#color11").addClass("future");
     }
 
-    if (midDayparse < CurrentTime){
+    if (midDay < CurrentTime){
       $("#color12").addClass("past");
-    } else if (midDayparse === CurrentTime){
+    } else if (midDay === CurrentTime){
       $("#color12").addClass("present");
-    } else if (midDayparse > CurrentTime){
+    } else if (midDay > CurrentTime){
       $("#color12").addClass("future");
     }
 
-    if (afternoon1parse < CurrentTime){
+    if (afternoon1 < CurrentTime){
       $("#color1").addClass("past");
-    } else if (afternoon1parse === CurrentTime){
+    } else if (afternoon1 === CurrentTime){
       $("#color1").addClass("present");
-    } else if (afternoon1parse > CurrentTime){
+    } else if (afternoon1 > CurrentTime){
       $("#color1").addClass("future");
     }
 
-    if (afternoon2parse < CurrentTime){
+    if (afternoon2 < CurrentTime){
       $("#color2").addClass("past");
-    } else if (afternoon2parse === CurrentTime){
+    } else if (afternoon2 === CurrentTime){
       $("#color2").addClass("present");
-    } else if (afternoon2parse > CurrentTime){
+    } else if (afternoon2 > CurrentTime){
       $("#color2").addClass("future");
     }
 
-    if (afternoon3parse < CurrentTime){
+    if (afternoon3 < CurrentTime){
       $("#color3").addClass("past");
-    } else if (afternoon3parse === CurrentTime){
+    } else if (afternoon3 === CurrentTime){
       $("#color3").addClass("present");
-    } else if (afternoon3parse > CurrentTime){
+    } else if (afternoon3 > CurrentTime){
       $("#color3").addClass("future");
     }
 
-    if (afternoon4parse < CurrentTime){
+    if (afternoon4 < CurrentTime){
       $("#color4").addClass("past");
-    } else if (afternoon4parse === CurrentTime){
+    } else if (afternoon4 === CurrentTime){
       $("#color4").addClass("present");
-    } else if (afternoon4parse > CurrentTime){
+    } else if (afternoon4 > CurrentTime){
       $("#color4").addClass("future");
     }
 
-    if (afternoon5parse < CurrentTime){
+    if (afternoon5 < CurrentTime){
       $("#color5").addClass("past");
-    } else if (afternoon5parse === CurrentTime){
+    } else if (afternoon5 === CurrentTime){
       $("#color5").addClass("present");
-    } else if (afternoon5parse > CurrentTime){
+    } else if (afternoon5 > CurrentTime){
       $("#color5").addClass("future");
     }
     
