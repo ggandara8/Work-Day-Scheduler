@@ -28,141 +28,156 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-      
+    
+  <div class="container">
     <section class="row">
         <div class="col-lg-1">
           <div class="time-block" id="9am" data-hour= "9">9am</div>
         </div>
     
         <div class="col-lg-10">
-          <textarea id="color9"></textarea>
+          <textarea id="color9" class="text"></textarea>
         </div>
     
         <div class="col-lg-1">
-          <button class="saveBtn"><i>Save</i></button>
+          <button class="saveBtn" id="save9"><i>Save</i></button>
         </div>
     </section>
+  </div>
+    
 
+  <div class="container">
     <section class="row">
-        <div class="col-lg-1 box">
+        <div class="col-lg-1">
           <div class="time-block" id="10am" data-hour="10">10am</div>
         </div>
     
         <div class="col-lg-10">
-          <textarea id="color10"></textarea>
+          <textarea id="color10" class="text"></textarea>
         </div>
     
         <div class="col-lg-1">
-          <button class="saveBtn"><i>Save</i></button>
+          <button class="saveBtn" id="save10"><i>Save</i></button>
         </div>
       </section>
+  </div>
 
+<div class="container">
       <section class="row">
-          <div class="col-lg-1 box">
+          <div class="col-lg-1">
             <div class="time-block" id="11am" data-hour="11">11am</div>
           </div>
       
           <div class="col-lg-10">
-            <textarea id="color11"></textarea>
+            <textarea id="color11" class="text"></textarea>
           </div>
       
           <div class="col-lg-1">
-            <button class="saveBtn"><i>Save</i></button>
+            <button class="saveBtn" id="save11"><i>Save</i></button>
           </div>
       </section>
+</div>
 
+<div class="container">
       <section class="row">
-          <div class="col-lg-1 box">
+          <div class="col-lg-1">
             <div class="time-block" id="12pm" data-hour="12">12pm</div>
           </div>
         
           <div class="col-lg-10">
-            <textarea id="color12"></textarea>
+            <textarea id="color12" class="text"></textarea>
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn"><i>Save</i></button>
+            <button class="saveBtn" id="save12"><i>Save</i></button>
           </div>
       </section>
+</div>
 
+<div class="container">
       <section class="row">
-          <div class="col-lg-1 box">
+          <div class="col-lg-1">
             <div class="time-block" id="13pm" data-hour="13">1pm</div>
           </div>
       
           <div class="col-lg-10">
-            <textarea id="color1"></textarea>
+            <textarea id="color1" class="text"></textarea>
           </div>
 
           <div class="col-lg-1">
-            <button class="saveBtn"><i>Save</i></button>
+            <button class="saveBtn" id="save13"><i>Save</i></button>
           </div>
       </section>
+</div>
 
+<div class="container">
       <section class="row">
-          <div class="col-lg-1 box">
+          <div class="col-lg-1">
             <div class="time-block" id="14pm" data-hour="14">2pm</div>
           </div>
       
           <div class="col-lg-10">
-            <textarea id="color2"></textarea>
+            <textarea id="color2" class="text"></textarea>
           </div>
   
           <div class="col-lg-1">
-            <button class="saveBtn"><i>Save</i></button>
+            <button class="saveBtn" id="save14"><i>Save</i></button>
           </div>
       </section>
+</div>
 
+<div class="container">
       <section class="row">
-          <div class="col-lg-1 box">
+          <div class="col-lg-1">
             <div class="time-block" id="15pm" data-hour="15">3pm</div>
           </div>
       
           <div class="col-lg-10">
-            <textarea id="color3"></textarea>
+            <textarea id="color3" class="text"></textarea>
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn"><i>Save</i></button>
+            <button class="saveBtn" id="save15"><i>Save</i></button>
           </div>
       </section>
+</div>
 
+<div class="container">
       <section class="row">
-          <div class="col-lg-1 box">
+          <div class="col-lg-1">
             <div class="time-block" id="16pm" data-hour="16">4pm</div>
           </div>
       
           <div class="col-lg-10">
-            <textarea id="color4"></textarea>
+            <textarea id="color4" class="text"></textarea>
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn"><i>Save</i></button>
+            <button class="saveBtn" id="save16"><i>Save</i></button>
           </div>
       </section>
+</div>
 
+<div class="container">
       <section class="row">
-          <div class="col-lg-1 box">
+          <div class="col-lg-1">
             <div class="time-block" id="17pm" data-hour="17">5pm</div>
           </div>
     
           <div class="col-lg-10">
-            <textarea id="color5"></textarea>
+            <textarea id="color5" class="text"></textarea>
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn"><i>Save</i></button>
+            <button class="saveBtn" id="save17"><i>Save</i></button>
           </div>
       </section>
-  
-    </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    <script>
+    <script type="text/javascript">
 
     $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
@@ -250,6 +265,52 @@
     } else if (afternoon5 > CurrentTime){
       $("#color5").addClass("future");
     }
+    
+   $("#save9").on("click", function(){
+    var text9 = $("#color9").val();
+    console.log(text9);
+   });
+
+   $("#save10").on("click", function(){
+    var text10 = $("#color10").val();
+    console.log(text10);
+   });
+
+   $("#save11").on("click", function(){
+    var text11 = $("#color11").val();
+    console.log(text11);
+   });
+
+   $("#save12").on("click", function(){
+    var text12 = $("#color12").val();
+    console.log(text12);
+   });
+
+   $("#save13").on("click", function(){
+    var text13 = $("#color1").val();
+    console.log(text13);
+   });
+
+   $("#save14").on("click", function(){
+    var text14 = $("#color2").val();
+    console.log(text14);
+   });
+
+   $("#save15").on("click", function(){
+    var text15 = $("#color3").val();
+    console.log(text15);
+   });
+
+   $("#save16").on("click", function(){
+    var text16 = $("#color4").val();
+    console.log(text16);
+   });
+
+   $("#save17").on("click", function(){
+    var text17 = $("#color5").val();
+    console.log(text17);
+   });
+
     
     </script>
   </body>
