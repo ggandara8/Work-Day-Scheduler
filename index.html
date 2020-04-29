@@ -34,6 +34,7 @@
         <div class="col-lg-1">
           <div class="time-block" id="9am" data-hour= "9">9am</div>
         </div>
+        <div id="test"></div>
     
         <div class="col-lg-10">
           <textarea id="color9" class="text"></textarea>
@@ -179,6 +180,8 @@
 
     <script type="text/javascript">
 
+    renderText();
+
     $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
     var hour = moment().format("H");
@@ -193,6 +196,7 @@
     var afternoon3 = parseInt($("#15pm").attr("data-hour"));
     var afternoon4 = parseInt($("#16pm").attr("data-hour"));
     var afternoon5 = parseInt($("#17pm").attr("data-hour"));
+    
 
     if (morning9 < CurrentTime){
       $("#color9").addClass("past");
@@ -269,6 +273,8 @@
    $("#save9").on("click", function(){
     var text9 = $("#color9").val();
     console.log(text9);
+    localStorage.setItem("text",JSON.stringify(text9)); //......................................
+ 
    });
 
    $("#save10").on("click", function(){
@@ -311,6 +317,14 @@
     console.log(text17);
    });
 
+   
+   function renderText(){
+     
+    var getText = JSON.parse(localStorage.getItem("text"));
+  
+   }
+
+   
     
     </script>
   </body>
