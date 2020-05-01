@@ -34,14 +34,13 @@
         <div class="col-lg-1">
           <div class="time-block" id="9am" data-hour= "9">9am</div>
         </div>
-        <div id="test"></div>
     
         <div class="col-lg-10">
           <textarea id="color9" class="text"></textarea>
         </div>
     
         <div class="col-lg-1">
-          <button class="saveBtn" id="save9"><i>Save</i></button>
+          <button class="saveBtn" id="save9" data-id="color9"><i>Save</i></button>
         </div>
     </section>
   </div>
@@ -58,7 +57,7 @@
         </div>
     
         <div class="col-lg-1">
-          <button class="saveBtn" id="save10"><i>Save</i></button>
+          <button class="saveBtn" id="save10" data-id="color10"><i>Save</i></button>
         </div>
       </section>
   </div>
@@ -74,7 +73,7 @@
           </div>
       
           <div class="col-lg-1">
-            <button class="saveBtn" id="save11"><i>Save</i></button>
+            <button class="saveBtn" id="save11" data-id="color11"><i>Save</i></button>
           </div>
       </section>
 </div>
@@ -90,7 +89,7 @@
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn" id="save12"><i>Save</i></button>
+            <button class="saveBtn" id="save12" data-id="color12"><i>Save</i></button>
           </div>
       </section>
 </div>
@@ -106,7 +105,7 @@
           </div>
 
           <div class="col-lg-1">
-            <button class="saveBtn" id="save13"><i>Save</i></button>
+            <button class="saveBtn" id="save13" data-id="color1"><i>Save</i></button>
           </div>
       </section>
 </div>
@@ -122,7 +121,7 @@
           </div>
   
           <div class="col-lg-1">
-            <button class="saveBtn" id="save14"><i>Save</i></button>
+            <button class="saveBtn" id="save14" data-id="color2"><i>Save</i></button>
           </div>
       </section>
 </div>
@@ -138,7 +137,7 @@
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn" id="save15"><i>Save</i></button>
+            <button class="saveBtn" id="save15" data-id="color3"><i>Save</i></button>
           </div>
       </section>
 </div>
@@ -154,7 +153,7 @@
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn" id="save16"><i>Save</i></button>
+            <button class="saveBtn" id="save16" data-id="color4"><i>Save</i></button>
           </div>
       </section>
 </div>
@@ -170,162 +169,14 @@
           </div>
     
           <div class="col-lg-1">
-            <button class="saveBtn" id="save17"><i>Save</i></button>
+            <button class="saveBtn" id="save17" data-id="color5"><i>Save</i></button>
           </div>
       </section>
 </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
 
-    <script type="text/javascript">
-
-    renderText();
-
-    $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
-
-    var hour = moment().format("H");
-    var CurrentTime = parseInt(hour);
-
-    var morning9 = parseInt($("#9am").attr("data-hour"));
-    var morning10 = parseInt($("#10am").attr("data-hour"));
-    var morning11 = parseInt($("#11am").attr("data-hour"));
-    var midDay = parseInt($("#12pm").attr("data-hour"));
-    var afternoon1 = parseInt($("#13pm").attr("data-hour"));
-    var afternoon2 = parseInt($("#14pm").attr("data-hour"));
-    var afternoon3 = parseInt($("#15pm").attr("data-hour"));
-    var afternoon4 = parseInt($("#16pm").attr("data-hour"));
-    var afternoon5 = parseInt($("#17pm").attr("data-hour"));
-    
-
-    if (morning9 < CurrentTime){
-      $("#color9").addClass("past");
-    } else if (morning9 === CurrentTime){
-      $("#color9").addClass("present");
-    } else if (morning9 > CurrentTime){
-      $("#color9").addClass("future");
-    }
-
-    if (morning10 < CurrentTime){
-      $("#color10").addClass("past");
-    } else if (morning10 === CurrentTime){
-      $("#color10").addClass("present");
-    } else if (morning10 > CurrentTime){
-      $("#color10").addClass("future");
-    }
-
-    if (morning11 < CurrentTime){
-      $("#color11").addClass("past");
-    } else if (morning11 === CurrentTime){
-      $("#color11").addClass("present");
-    } else if (morning11 > CurrentTime){
-      $("#color11").addClass("future");
-    }
-
-    if (midDay < CurrentTime){
-      $("#color12").addClass("past");
-    } else if (midDay === CurrentTime){
-      $("#color12").addClass("present");
-    } else if (midDay > CurrentTime){
-      $("#color12").addClass("future");
-    }
-
-    if (afternoon1 < CurrentTime){
-      $("#color1").addClass("past");
-    } else if (afternoon1 === CurrentTime){
-      $("#color1").addClass("present");
-    } else if (afternoon1 > CurrentTime){
-      $("#color1").addClass("future");
-    }
-
-    if (afternoon2 < CurrentTime){
-      $("#color2").addClass("past");
-    } else if (afternoon2 === CurrentTime){
-      $("#color2").addClass("present");
-    } else if (afternoon2 > CurrentTime){
-      $("#color2").addClass("future");
-    }
-
-    if (afternoon3 < CurrentTime){
-      $("#color3").addClass("past");
-    } else if (afternoon3 === CurrentTime){
-      $("#color3").addClass("present");
-    } else if (afternoon3 > CurrentTime){
-      $("#color3").addClass("future");
-    }
-
-    if (afternoon4 < CurrentTime){
-      $("#color4").addClass("past");
-    } else if (afternoon4 === CurrentTime){
-      $("#color4").addClass("present");
-    } else if (afternoon4 > CurrentTime){
-      $("#color4").addClass("future");
-    }
-
-    if (afternoon5 < CurrentTime){
-      $("#color5").addClass("past");
-    } else if (afternoon5 === CurrentTime){
-      $("#color5").addClass("present");
-    } else if (afternoon5 > CurrentTime){
-      $("#color5").addClass("future");
-    }
-    
-   $("#save9").on("click", function(){
-    var text9 = $("#color9").val();
-    console.log(text9);
-    localStorage.setItem("text",JSON.stringify(text9)); //......................................
- 
-   });
-
-   $("#save10").on("click", function(){
-    var text10 = $("#color10").val();
-    console.log(text10);
-   });
-
-   $("#save11").on("click", function(){
-    var text11 = $("#color11").val();
-    console.log(text11);
-   });
-
-   $("#save12").on("click", function(){
-    var text12 = $("#color12").val();
-    console.log(text12);
-   });
-
-   $("#save13").on("click", function(){
-    var text13 = $("#color1").val();
-    console.log(text13);
-   });
-
-   $("#save14").on("click", function(){
-    var text14 = $("#color2").val();
-    console.log(text14);
-   });
-
-   $("#save15").on("click", function(){
-    var text15 = $("#color3").val();
-    console.log(text15);
-   });
-
-   $("#save16").on("click", function(){
-    var text16 = $("#color4").val();
-    console.log(text16);
-   });
-
-   $("#save17").on("click", function(){
-    var text17 = $("#color5").val();
-    console.log(text17);
-   });
-
-   
-   function renderText(){
-     
-    var getText = JSON.parse(localStorage.getItem("text"));
-  
-   }
-
-   
-    
-    </script>
   </body>
 </html>
